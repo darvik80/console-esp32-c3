@@ -1,0 +1,38 @@
+{
+  "wifi": [
+    {
+      "ssid": "Lazada IoT",
+      "password": "L3M02023!oT"
+    },
+    {
+      "ssid": "A12A-08",
+      "password": "66778899"
+    },
+    {
+      "ssid": "alibaba-guest",
+      "password": ""
+    }
+  ],
+  "mqtt": [
+    {
+      "type": "alicloud",
+      "product-name": "a24TdEOcf2z",
+      "device-name": "esp-idf-mushroom",
+      "device-secret": "a5bae6e7df95652666c0660eadcc661d"
+    },
+    {
+      "type": "local",
+      "uri": "mqtt://media-vn.local",
+      "username": "mqtt",
+      "password": "mqtt",
+      "device-name": "robot",
+      "product-name": "darvik-home"
+    }
+  ],
+  "gamepad": {
+    "type": "ble",
+    "bda": "03:21:91:57:16:c1",
+    "vendor-id": "1d6b",
+    "product-id": "1d6b"
+  }
+}
