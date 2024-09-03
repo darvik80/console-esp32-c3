@@ -1,3 +1,4 @@
 # Test devices for study UART/SPI/I2S
-
-![image](docs/esp32-c3.png)
+<div align="center">
+	<img src="docs/esp32-c3.png">
+</div>
