@@ -6,19 +6,19 @@
 #include <core/system/wifi/WifiService.h>
 #include <core/system/mqtt/MqttService.h>
 #include <core/system/console/Console.h>
+#include <core/system/exchange/spi/SpiExchange.h>
 #include <soc/gpio_num.h>
 #include <driver/gpio.h>
-#include "core/system/exchange/UartExchange.h"
 
 class Console : public Application<Console> {
 public:
     Console() = default;
 protected:
     void userSetup() override {
-        getRegistry().create<NvsStorage>();
-        getRegistry().create<UartConsoleService>();
-        getRegistry().create<UartExchange>();
-        getRegistry().create<WifiService>();
+        ///getRegistry().create<NvsStorage>();
+        //getRegistry().create<UartConsoleService>();
+        getRegistry().create<SpiExchange>();
+        //getRegistry().create<WifiService>();
 //        getRegistry().create<TelemetryService>();
 //        auto &mqtt = getRegistry().create<MqttService>();
 //        mqtt.addJsonProcessor<Telemetry>("/user/telemetry");
