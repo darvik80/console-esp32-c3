@@ -19,7 +19,7 @@ protected:
         //getRegistry().create<UartConsoleService>();
         getRegistry().create<SpiExchange>();
         //getRegistry().create<WifiService>();
-//        getRegistry().create<TelemetryService>();
+        getRegistry().create<TelemetryService>();
 //        auto &mqtt = getRegistry().create<MqttService>();
 //        mqtt.addJsonProcessor<Telemetry>("/user/telemetry");
     }
