@@ -24,7 +24,10 @@
     "baud-rate": 115200
   },
   "spi": {
-    "device": "SPI2",
+    "device": "SPI3",
+    "mode": "SLAVE"
+  },
+  "i2c": {
     "mode": "SLAVE"
   }
 }
