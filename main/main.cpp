@@ -6,6 +6,7 @@
 #include <core/system/mqtt/MqttService.h>
 #include <core/system/exchange/spi/SpiExchange.h>
 #include <core/system/exchange/i2c/I2cExchange.h>
+#include <core/system/exchange/uart/UartExchange.h>
 #include <driver/gpio.h>
 #include "led/LedStripService.h"
 
@@ -21,6 +22,7 @@ protected:
         //getRegistry().create<UartConsoleService>();
         //getRegistry().create<SpiExchange>();
         getRegistry().create<I2cExchange>();
+        getRegistry().create<UartExchange>();
         //getRegistry().create<WifiService>();
 
         // auto &mqtt = getRegistry().create<MqttService>();
