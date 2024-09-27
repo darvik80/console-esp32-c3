@@ -4,9 +4,9 @@
 #include <core/system/telemetry/TelemetryService.h>
 #include <core/system/wifi/WifiService.h>
 #include <core/system/mqtt/MqttService.h>
-#include <core/system/exchange/spi/SpiExchange.h>
-#include <core/system/exchange/i2c/I2cExchange.h>
-#include <core/system/exchange/uart/UartExchange.h>
+#include <exchange/spi/SpiExchange.h>
+#include <exchange/i2c/I2cExchange.h>
+#include <exchange/uart/UartExchange.h>
 #include <driver/gpio.h>
 #include "led/LedStripService.h"
 
