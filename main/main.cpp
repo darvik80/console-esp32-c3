@@ -20,9 +20,9 @@ protected:
     void userSetup() override {
         ///getRegistry().create<NvsStorage>();
         //getRegistry().create<UartConsoleService>();
-        //getRegistry().create<UartExchange>()
+        getRegistry().create<UartExchange>();
         //getRegistry().create<SpiExchange>();
-        getRegistry().create<I2cExchange>();
+        //getRegistry().create<I2cExchange>();
         //getRegistry().create<WifiService>();
 
         // auto &mqtt = getRegistry().create<MqttService>();
