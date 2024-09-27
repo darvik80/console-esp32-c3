@@ -20,9 +20,9 @@ protected:
     void userSetup() override {
         ///getRegistry().create<NvsStorage>();
         //getRegistry().create<UartConsoleService>();
+        //getRegistry().create<UartExchange>()
         //getRegistry().create<SpiExchange>();
         getRegistry().create<I2cExchange>();
-        getRegistry().create<UartExchange>();
         //getRegistry().create<WifiService>();
 
         // auto &mqtt = getRegistry().create<MqttService>();
@@ -43,7 +43,7 @@ protected:
 static std::shared_ptr<Console> app;
 
 extern "C" void app_main() {
-    esp_log_level_set("*", ESP_LOG_VERBOSE);
+    esp_log_level_set("*", ESP_LOG_INFO);
     const size_t free = heap_caps_get_free_size(MALLOC_CAP_DEFAULT);
     const size_t total = heap_caps_get_total_size(MALLOC_CAP_DEFAULT);
     esp_logi(app, "heap: %zu/%zu", free, total);
