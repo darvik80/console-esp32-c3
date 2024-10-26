@@ -4,14 +4,8 @@
 #include <core/system/telemetry/TelemetryService.h>
 #include <core/system/wifi/WifiService.h>
 #include <core/system/mqtt/MqttService.h>
-#include <exchange/spi/SpiExchange.h>
-#include <exchange/i2c/I2cExchange.h>
-#include <exchange/uart/UartExchange.h>
-#include <driver/gpio.h>
+#include <exchange/espnow/EspNowExchange.h>
 #include "led/LedStripService.h"
-
-#include "config.h"
-
 class Console : public Application<Console> {
 public:
     Console() = default;
@@ -20,9 +14,10 @@ protected:
     void userSetup() override {
         ///getRegistry().create<NvsStorage>();
         //getRegistry().create<UartConsoleService>();
-        getRegistry().create<UartExchange>();
+        //getRegistry().create<UartExchange>();
         //getRegistry().create<SpiExchange>();
         //getRegistry().create<I2cExchange>();
+        getRegistry().create<EspNowExchange>();
         //getRegistry().create<WifiService>();
 
         // auto &mqtt = getRegistry().create<MqttService>();
